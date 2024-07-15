@@ -7,29 +7,67 @@
     <title>Chelsee Bustos</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .carousel-item img {
+            border-radius: 15px;
+            object-fit: cover;
+            height: 400px;
+            cursor: pointer;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.438);
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.438);
+            border-radius: 4px;
+        }
+
+        .navbar-toggler-icon {
+            display: none;
+        }
+
+        .navbar-toggler, .navbar-toggler:active, .navbar-toggler:focus {
+            border: none; 
+            outline: none; 
+        }
+
+        .custom-toggler-icon {
+            font-size: 1em;
+            color: black;
+            border: none; 
+            outline: none; 
+        }
+    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100 bg-white">
     <!-- Header Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light py-4" style="background-color: #f9eecf;">
+    <nav class="navbar navbar-expand-lg navbar-light py-4 sticky-top" style="background-color: #f9eecf;">
         <a class="navbar-brand" href="#">
             <img src="assets/images/cblogoblack.png" alt="Logo" class="d-inline-block align-top"
                 style="width: 95px; height: 40px;"> Chelsee
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="custom-toggler-icon">
+                <i class="fas fa-bars"></i>
+            </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Services</a>
@@ -42,7 +80,7 @@
     </nav>
 
     <!-- Header Section -->
-    <section class="container my-5 flex-grow-1 d-flex align-items-center"
+    <section class="container my-5 flex-grow-1 d-flex align-items-center" id="home"
         style="background: url(assets/images/bgbeige.gif); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="row">
             <div class="col-lg-6 d-flex flex-column align-items-start justify-content-center text-left">
@@ -65,7 +103,7 @@
     </section>
 
     <!-- So, Who am I? -->
-    <section class="container my-5">
+    <section class="container my-5" id="about">
         <div class="row">
             <div class="col-lg-6 d-flex align-items-center justify-content-center">
                 <img src="assets/images/chelshand.png" alt="Chelsee Bustos" class="img-fluid">
@@ -102,7 +140,7 @@
     </section>
 
     <!-- Navigate my Portfolio -->
-    <section class="container my-5">
+    <section class="container my-5" id="portfolio">
         <div class="row">
             <div class="col-lg-6 d-flex align-items-center justify-content-center">
                 <img src="assets/images/chelsAHA.png" alt="Chelsee Bustos" class="img-fluid">
@@ -132,28 +170,48 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="assets/images/opheliawork.PNG" alt="First slide"
-                            style="border-radius: 15px; width: 800px; height: 400px; object-fit: cover;"
-                            data-toggle="modal" data-target="#imageModal" data-src="assets/images/opheliawork.PNG">
+                            data-toggle="modal" data-target="#imageModal" data-src="assets/images/opheliawork.PNG"
+                            data-title="title dito 1" data-description="description dito 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>title dito 1</h5>
+                            <p>description dito 1</p>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="assets/images/pokecardswork.PNG" alt="Second slide"
-                            style="border-radius: 15px; width: 800px; height: 400px; object-fit: cover;"
-                            data-toggle="modal" data-target="#imageModal" data-src="assets/images/pokecardswork.PNG">
+                            data-toggle="modal" data-target="#imageModal" data-src="assets/images/pokecardswork.PNG"
+                            data-title="title dito 2" data-description="description dito 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>title dito 2</h5>
+                            <p>description dito 2</p>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="assets/images/pokedexwork.PNG" alt="Third slide"
-                            style="border-radius: 15px; width: 800px; height: 400px; object-fit: cover;"
-                            data-toggle="modal" data-target="#imageModal" data-src="assets/images/pokedexwork.PNG">
+                            data-toggle="modal" data-target="#imageModal" data-src="assets/images/pokedexwork.PNG"
+                            data-title="title dito 3" data-description="description dito 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>title dito 3</h5>
+                            <p>description dito 3</p>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="assets/images/simboxwork.PNG" alt="Fourth slide"
-                            style="border-radius: 15px; width: 800px; height: 400px; object-fit: cover;"
-                            data-toggle="modal" data-target="#imageModal" data-src="assets/images/simboxwork.PNG">
+                            data-toggle="modal" data-target="#imageModal" data-src="assets/images/simboxwork.PNG"
+                            data-title="title dito 4" data-description="description dito 4">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>title dito 4</h5>
+                            <p>description dito 4</p>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="assets/images/advisorywork.PNG" alt="Fifth slide"
-                            style="border-radius: 15px; width: 800px; height: 400px; object-fit: cover;"
-                            data-toggle="modal" data-target="#imageModal" data-src="assets/images/advisorywork.PNG">
+                            data-toggle="modal" data-target="#imageModal" data-src="assets/images/advisorywork.PNG"
+                            data-title="title dito 5" data-description="description dito 5">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>title dito 5</h5>
+                            <p>description dito 5</p>
+                        </div>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -175,6 +233,10 @@
             <div class="modal-content">
                 <div class="modal-body p-0">
                     <img src="" class="img-fluid w-100" id="modalImage">
+                    <div class="p-3">
+                        <h5 id="modalTitle"></h5>
+                        <p id="modalDescription"></p>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -182,7 +244,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Footer -->
     <footer class="footer py-4 mt-auto" style="background-color: #f9eecf;">
@@ -203,12 +264,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <script>
         $('#imageModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget);
             var src = button.data('src');
+            var title = button.data('title');
+            var description = button.data('description');
             var modal = $(this);
             modal.find('.modal-body img').attr('src', src);
+            modal.find('#modalTitle').text(title);
+            modal.find('#modalDescription').text(description);
+        });
+
+        $(document).ready(function () {
+            $('.navbar-toggler').click(function () {
+                var icon = $(this).find('i');
+                icon.toggleClass('fa-bars fa-times');
+            });
         });
     </script>
 </body>
